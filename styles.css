@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(224, 250, 249);
+  }
+
+
+
+.navbar {
+    background-color: #235944;
+    overflow: hidden;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: rgb(211, 249, 245);
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #449b7b;
+    color: rgb(33, 75, 53);
+}
+
+.letras{
+    color:rgb(48, 126, 104);
+}
+
+
+
+* {box-sizing: border-box;}
+
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 450px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: rgb(198, 229, 247);
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+
+/* unvisited link */
+a:link {
+    color: rgb(52, 22, 134);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(87, 117, 248);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(209, 72, 236);
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgb(139, 139, 250);
+  }
