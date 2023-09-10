@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="invoiceStyles.css">
+    <title>Invoice</title>
+   
+    
+</head>
+<body>
+    <h2>Invoice</h2>
+    <div id="invoice-items"></div>
+    <h4>Subtotal: <span id="subtotal">$0.00</span></h4>
+    <h4>Taxes (11.5%): <span id="taxes">$0.00</span></h4>
+    <h4>Total After Taxes: <span id="total-after-taxes">$0.00</span></h4>
+    
+    <script>
+     document.addEventListener("DOMContentLoaded", function() {
+    
+    const params = new URLSearchParams(window.location.search);
+    const items = JSON.parse(decodeURIComponent(params.get('items')));
+
+    // Items
+    const invoiceItemsDiv = document.getElementById("invoice-items");
+    let subtotal = 0;
+    items.forEach(item => {
+        const [name, priceStr] = item.split(" | ");
+        const price = parseFloat(priceStr.substring(1));
+        subtotal += price;
+        const pItem = document.createElement("p");
+        pItem.innerHTML = `<h4>${name} | $${price.toFixed(2)}</h4>`;
+        invoiceItemsDiv.appendChild(pItem);
+    });
+    
+    // Subtotal
+    document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
+
+    // Taxes 
+    const taxRate = 0.115;
+    const taxes = subtotal * taxRate;
+    document.getElementById("taxes").textContent = `$${taxes.toFixed(2)}`;
+
+    // Total after taxes
+    const totalAfterTaxes = subtotal + taxes;
+    document.getElementById("total-after-taxes").textContent = `$${totalAfterTaxes.toFixed(2)}`;
+});
+
+
+    </script>
+</body>
+</html>

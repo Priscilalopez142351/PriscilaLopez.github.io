@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h2 {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+h4 {
+    margin: 10px 0;
+}
+
+#invoice-items {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+p {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+#subtotal, #taxes, #total-after-taxes {
+    display: block;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px;
+    text-align: right;
+    font-weight: bold;
+}
+
+#total-after-taxes {
+    background-color: #333;
+    color: #fff;
+}

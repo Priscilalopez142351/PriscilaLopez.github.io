@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Computer build</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="info.html">Info</a>
+        <a href="Contact.html">Contact</a>
+        <a href="compu.html">Build Computer</a>
+        <a href="alternateview.html">Alternate View</a></div>
+    
+        <br><br>
+        <div class="card" id="checkout">
+            <h2>CART</h2>
+            <div id="cart-items"></div> 
+            <h4>Total: <span>$0.00</span></h4>
+            <p><button class="checkout-btn">Check out</button></p>
+        </div>
+    
+    
+        <h2 class="computer-part">Select Case</h2>
+        <div class = "row">
+        <div class="column">
+        <div class="card">
+
+            <img src="Case Corsair Carbide Series SPEC-04 Tempered Glass.jpg" height="280px" width="100px"alt="Case Corsair Carbide Series SPEC-04 Tempered Glass" style="width:100%">
+            <h4>Corsair Carbide Series SPEC-04 Tempered Glass</h4>
+            <p class="price">$99.00</p>
+            <p><button>Add to Cart</button></p>
+          </div></div>
+
+
+          
+          <div class="column">
+          <div class="card">
+            <img src="Case Corsair iCue RGB 5000X.jpg" height="280px" width="90px"alt="Case Corsair iCue RGB 5000X" style="width:80%">
+            <h4>Corsair iCue RGB 5000X</h4>
+            <p class="price">$100.00</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </div>
+ 
+        
+            <div class="column">
+          <div class="card">
+            <img src="Case Fractal Design Meshify-C.jpg" height="280px" width="100px"alt="Case Fractal Design Meshify-C" style="width:100%">
+            <h4>Fractal Design Meshify-C</h4>
+            <p class="price">$105.00</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </div>  
+    </div>
+
+          <br><br>
+
+
+          <h2 class="computer-part">Select CPU</h2>
+
+          <div class = "row">
+          <div class="column">
+          <div class="card">
+            <img src="CPU AMD Ryzen 5 5600x.jpg" height="280px" width="100px"alt="CPU AMD Ryzen 5 5600x" style="width:100%">
+            <h4>AMD Ryzen 5 5600x</h4>
+            <p class="price">$100.99</p>
+            <p><button>Add to Cart</button></p>
+            </div></div>
+
+          <div class="column">
+          <div class="card">
+            <img src="CPU Intel Core i5-12600K.jpg" height="280px" width="100px"alt="CPU Intel Core i5-12600K" style="width:100%">
+            <h4>Intel Core i5-12600K</h4>
+            <p class="price">$129.00</p>
+            <p><button>Add to Cart</button></p>
+          </div></div>
+
+          <div class="column">
+          <div class="card">
+            <img src="CPU Intel Core i5-13600K.jpg" height="280px" width="100px"alt="CPU Intel Core i5-13600K" style="width:100%">
+            <h4>Intel Core i5-13600K</h4>
+            <p class="price">$140.00</p>
+            <p><button>Add to Cart</button></p>
+          </div></div>
+        </div>
+
+
+           <br><br>
+          <h2 class="computer-part">Select GPU</h2>
+          <div class = "row">
+          <div class="column">
+          <div class="card">
+            <img src="GPU Intel. Arc A750.jpg" height="280px" width="100px"alt="GPU Intel. Arc A750" style="width: 100%">
+            <h4>Intel. Arc A750</h4>
+            <p class="price">$100.00</p>
+            <p><button>Add to Cart</button></p>
+          </div></div>
+
+          <div class="column">
+          <div class="card">
+            <img src="GPU Nvidia. RTX 4070.jpg" height="180px" width="120px"alt="GPU Nvidia. RTX 4070" style="width:100%">
+            <h4>Nvidia. RTX 4070</h4>
+            <p class="price">$110.00</p>
+            <p><button>Add to Cart</button></p>
+          </div></div>
+
+          <div class="column">
+          <div class="card">
+            <img src="GPU Nvidia. RTX 4090.jpg" height="180px" width="130px"alt="GPU Nvidia. RTX 4090" style="width:100%">
+            <h4>Nvidia. RTX 4090</h4>
+            <p class="price">$120.00</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </div>
+          
+
+          
+
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Add to cart
+    const buttons = document.querySelectorAll(".card button");
+
+    for (const button of buttons) {
+        button.addEventListener("click", function(event) {
+           
+            const card = event.target.closest(".card");
+
+            
+            const itemName = card.querySelector("h4").textContent;
+            const itemPrice = card.querySelector(".price").textContent;
+
+           
+            const newItem = document.createElement("div"); 
+            newItem.innerHTML = `
+                <h4>${itemName} | ${itemPrice}</h4>
+                <button class="remove-btn">Remove</button>`;
+
+            newItem.querySelector(".remove-btn").addEventListener("click", function() {
+                // Remove item 
+                cartItemsDiv.removeChild(newItem);
+
+                //New total 
+                const priceValue = parseFloat(itemPrice.substring(1));  
+                const currentTotal = parseFloat(totalSpan.textContent.substring(1)) || 0;
+                totalSpan.textContent = `$${(currentTotal - priceValue).toFixed(2)}`;
+            });
+            
+            const cartItemsDiv = document.getElementById("cart-items");
+            cartItemsDiv.appendChild(newItem);
+
+            const checkoutDiv = document.getElementById("checkout");
+            const totalSpan = checkoutDiv.querySelector("h4 > span");
+            
+            const priceValue = parseFloat(itemPrice.substring(1));  
+            const currentTotal = parseFloat(totalSpan.textContent.substring(1)) || 0;
+            totalSpan.textContent = `$${(currentTotal + priceValue).toFixed(2)}`;
+            const toast = document.getElementById('toast');
+toast.classList.add('show');
+
+setTimeout(() => {
+    toast.classList.remove('show');
+}, 3000);
+        });
+    }
+   
+    
+});
+
+    document.querySelector(".checkout-btn").addEventListener("click", function() {
+        // Array items
+        const items = Array.from(document.querySelectorAll("#cart-items h4")).map(el => el.textContent);
+
+       
+        const itemsString = encodeURIComponent(JSON.stringify(items));
+
+
+      //invoice
+        window.open(`invoice.html?items=${itemsString}`, "_blank", "width=800,height=600");
+    });
+
+
+    </script>
+         
+         <div id="toast" class="toast">
+            Item added to cart!
+        </div>
+        
+        
+</body>
+
+</html>
