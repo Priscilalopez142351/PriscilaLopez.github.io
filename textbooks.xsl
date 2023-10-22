@@ -30,24 +30,22 @@
         <a href="AdobeAnimate.html">Adobe Animate</a>
         <a href="textbooks.xml">Textbooks</a>
         <a href="alternateview.html">Alternate View</a>
-         <a href="textbooks.xml">Textbooks</a>
+         
         
         </div>
 
-                <!-- End of Header/Menu -->
-
-                <!-- Table to display textbooks -->
+            
                 <table>
                     <thead>
                         <tr>
                             <th>Title</th>
-                            <th>Author</th>
+                            <th>Author(s)</th>
                             <th>Publisher</th>
-                            <th>Year of Publication</th>
+                            <th>Publication Year</th>
                             <th>ISBN</th>
-                            <th>Book Website</th>
+                            <th>Website</th>
                             <th>Edition</th>
-                            <th>Cover Type</th>
+                            <th>Cover</th>
                         </tr>
                     </thead>
                     <tbody>

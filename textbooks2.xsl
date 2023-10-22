@@ -4,7 +4,7 @@
     <xsl:template match="/">
         <html>
             <head>
-            <link rel="stylesheet" href="xmlStylesAlt.css"/>
+            <link rel="stylesheet" href="xmlStyle2.css"/>
                 <style>
                     table {
                         width: 100%;
@@ -21,34 +21,33 @@
                 </style>
             </head>
             <body>
-                <!-- Header/Menu -->
+               
                     <div class="navbar">
                         <a href="alternateview.html">Home</a>
                         <a href="info2.html">Info</a>
                         <a href="Contact2.html">Contact</a>
                         <a href="compu2.html">Build Computer</a>
                         <a href="AdodeAnimate2.html">Adobe Animate</a>
+                         <a href="textbooks2.xml">Textbooks</a>
                         <a href="index.html">Alternate View</a>
-                        <a href="textbooksAlt.xml">Textbooks</a>    
+                          
                         
                         
                         </div>
                         
 
-                <!-- End of Header/Menu -->
-
-                <!-- Table to display textbooks -->
+               
                 <table>
                     <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Author</th>
+                          <th>Title</th>
+                            <th>Author(s)</th>
                             <th>Publisher</th>
-                            <th>Year of Publication</th>
+                            <th>Publication Year</th>
                             <th>ISBN</th>
-                            <th>Book Website</th>
+                            <th>Website</th>
                             <th>Edition</th>
-                            <th>Cover Type</th>
+                            <th>Cover</th>
                         </tr>
                     </thead>
                     <tbody>
