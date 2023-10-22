@@ -4,7 +4,7 @@
     <xsl:template match="/">
         <html>
             <head>
-            <link rel="stylesheet" href="xmlStyle.css"/>
+            <link rel="stylesheet" href="xmlStylesAlt.css"/>
                 <style>
                     table {
                         width: 100%;
@@ -23,16 +23,17 @@
             <body>
                 <!-- Header/Menu -->
                     <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="info.html">Info</a>
-        <a href="Contact.html">Contact</a>
-        <a href="compu.html">Build Computer</a> 
-        <a href="AdobeAnimate.html">Adobe Animate</a>
-        <a href="textbooks.xml">Textbooks</a>
-        <a href="alternateview.html">Alternate View</a>
-         <a href="textbooks.xml">Textbooks</a>
-        
-        </div>
+                        <a href="alternateview.html">Home</a>
+                        <a href="info2.html">Info</a>
+                        <a href="Contact2.html">Contact</a>
+                        <a href="compu2.html">Build Computer</a>
+                        <a href="AdodeAnimate2.html">Adobe Animate</a>
+                        <a href="index.html">Alternate View</a>
+                        <a href="textbooksAlt.xml">Textbooks</a>    
+                        
+                        
+                        </div>
+                        
 
                 <!-- End of Header/Menu -->
 

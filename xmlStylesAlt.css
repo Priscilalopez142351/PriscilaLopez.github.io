@@ -1,0 +1,28 @@
+/* barra nav */
+.navbar {
+    background-color: #433751;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: rgb(211, 249, 245);
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #433751;
+    color: rgb(238, 182, 221);
+}
+
+.letras{
+    color:#748b9c;
+}
+
+
+/* fondo */
+body {
+    background-color: #f0e3e3;
+  }
