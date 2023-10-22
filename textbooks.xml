@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "textbooks.xsl"?>
+
+<textbooks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="textbooks.xsd">
+    <textbook>
+        <title>Java How To Program (Early Objects) (10th Edition)</title>
+        <firstName>Paul</firstName>
+        <lastName>Deitel</lastName>
+    </author>
+    <author>
+        <firstName>Harvey</firstName>
+        <lastName>Deitel</lastName>
+    </author>
+
+        <publisher>Pearson</publisher>
+        <year>2014</year>
+        <isbn>0133807800</isbn>
+        <edition>10th</edition>
+        <covertype>Softcover</covertype>
+        <website>https://www.pearson.com/en-us.html</website>
+    </textbook>
+
+
+    <textbook>
+        <title>Internet and World Wide Web: How to Program with CD-ROM BK CD ROM</title>
+        <author>
+            <firstName>Paul</firstName>
+        <lastName>Deitel</lastName>
+    </author>
+    <author>
+        <firstName>Harvey</firstName>
+        <lastName>Deitel</lastName>
+    </author>
+    <author>
+            <firstName>T.</firstName>
+            <lastName>Nieto</lastName>
+    </author>
+        <publisher>Prentice Hal</publisher>
+        <year>2004</year>
+        <isbn>0131450913</isbn>
+        <edition>3rd</edition>
+        <covertype>Paperback</covertype>
+        <website>https://www.amazon.com/Internet-World-Wide-Web-Program/dp/0131450913</website>
+    </textbook>
+</textbooks>
